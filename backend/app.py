@@ -2,6 +2,7 @@ from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from dotenv import load_dotenv
+from flask_cors import CORS
 
 load_dotenv(dotenv_path="\.flaskenv")
 
@@ -11,6 +12,7 @@ DB_PASSWORD = os.getenv("DB_PASSWORD")
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://postgres:{ DB_PASSWORD }@localhost/baby-tracker"
 db = SQLAlchemy(app)
+CORS(app)
 
 app.app_context().push()
 
