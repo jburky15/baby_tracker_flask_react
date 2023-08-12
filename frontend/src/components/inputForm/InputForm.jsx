@@ -1,4 +1,4 @@
-import { userEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import React from 'react'
 import './InputForm.css'
 
@@ -19,8 +19,8 @@ const InputForm = () => {
     <>
       <div className='eventInput'>
         <form>
-          <label htmlFor="description">Description</label>
-          <input onChange={ handleChange } type="text" name="description" id="description" value={ description } />
+          <label htmlFor="description">What the baby do?</label>
+          <input onChange={ handleChange } type="text" name="description" id="descriptionInput" value={ description } placeholder='Baby Event' />
         </form>
       </div>
     </>

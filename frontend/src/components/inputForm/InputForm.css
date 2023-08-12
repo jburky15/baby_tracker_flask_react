@@ -1,17 +1,15 @@
 .eventInput {
+    margin-top: 45%;
+    font-size: 1.5rem;
+}
+
+form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    gap: 2rem;
 }
 
-.eventHeader {
-    font-size: 2rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.inputField {
+#descriptionInput {
     font-size: 1.5rem;
     text-align: center;
     width: 20rem;
@@ -19,14 +17,4 @@
     padding: 15px;
     border: 2px solid black;
     border-radius: 5px;
-}
-
-.submitBtn {
-    width: 12rem;
-    margin-top: 1rem;
-    padding: .5rem;
-}
-
-.submitBtn:hover {
-    cursor: pointer;
 }
