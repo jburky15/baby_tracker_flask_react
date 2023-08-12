@@ -18,9 +18,10 @@ const InputForm = () => {
   return (
     <>
       <div className='eventInput'>
-        <form>
+        <form onSubmit={ handleSubmit }>
           <label htmlFor="description">What the baby do?</label>
           <input onChange={ handleChange } type="text" name="description" id="descriptionInput" value={ description } placeholder='Baby Event' />
+          <input type="submit" value="SUBMIT" className='submitBtn' />
         </form>
       </div>
     </>

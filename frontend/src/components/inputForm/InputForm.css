@@ -15,6 +15,23 @@ form {
     width: 20rem;
     height: 1rem;
     padding: 15px;
-    border: 2px solid black;
+    border: 2px solid var(--text-color);
     border-radius: 5px;
+}
+
+.submitBtn {
+    height: 2rem;
+    width: 50%;
+    margin-left: 25%;
+    font-size: 1rem;
+    font-weight: 400;
+    background: var(--accent-color);
+    color: --;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+}
+
+.submitBtn:hover {
+    cursor: pointer;
+    background: rgb(19, 99, 179);
 }
