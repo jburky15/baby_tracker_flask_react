@@ -24,14 +24,25 @@ function App() {
     }
   }
 
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`${ baseUrl }/events/${ id }`)
+      const updatedList = eventsList.filter(event => event.id !== id)
+      setEventsList(updatedList)
+    } catch (err) {
+      console.log(err.message)
+    }
+  }
+
   const fetchEvents = async () => {
     const data = await axios.get(`${ baseUrl }/events`)
     const { events } = data.data
     setEventsList(events)
   }
-    useEffect(() => {
-      fetchEvents()
-    }, [])
+
+  useEffect(() => {
+    fetchEvents()
+  }, [])
 
   return (
     <div className="App">
@@ -48,7 +59,10 @@ function App() {
         <ul>
           {eventsList.map(event => {
             return (
-              <li key={ event.id }>{event.description}</li>
+                <li key={event.id}>
+                  {event.description}
+                  <button className="delBtn" onClick={() => handleDelete(event.id)}>Delete</button>
+                </li>
             )
           })}
         </ul>
