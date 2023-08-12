@@ -1,9 +1,15 @@
 from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv(dotenv_path="\.flaskenv")
+
+import os
+DB_PASSWORD = os.getenv("DB_PASSWORD")
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgrespassword@localhost/baby-tracker'
+app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://postgres:{ DB_PASSWORD }@localhost/baby-tracker"
 db = SQLAlchemy(app)
 
 app.app_context().push()
