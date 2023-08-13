@@ -112,7 +112,7 @@ function App() {
               return (
                 <li key={event.id}>
                   { event.description }
-                  <button onClick={() => toggleEdit(event)}>Edit</button>
+                  <button className="editBtn" onClick={() => toggleEdit(event)}>Edit</button>
                   <button className="delBtn" onClick={() => handleDelete(event.id)}>Delete</button>
                 </li>
             )

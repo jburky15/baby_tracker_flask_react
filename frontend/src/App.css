@@ -76,8 +76,19 @@ form {
     box-shadow: 4px 4px 5px rgba(0, 0, 0, .6);
 }
 
-.delBtn {
+.editBtn {
     margin-left: 10vw;
+    width: 4rem;
+    height: 2rem;
+    background: dodgerblue;
+    color: white;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+}
+
+.delBtn {
+    margin-left: 1rem;
+    margin-right: -2rem;
     width: 4rem;
     height: 2rem;
     background: rgb(255, 0, 0);
