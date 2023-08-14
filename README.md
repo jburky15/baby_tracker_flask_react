@@ -8,7 +8,7 @@
 - Install python-dotenv
 - Install flask-cors
 <br>
- Or jus look up how to install these off of the pipfile or pipfile.lock, whichever one does it...
+Or just use pip install -r requirements.txt
 
 ## Frontend Dependencies ⚛
 just type npm i, the package.json will tell it what to do
