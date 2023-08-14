@@ -111,6 +111,7 @@ function App() {
             } else {
               return (
                 <li key={event.id}>
+                  { format(new Date(event.created_at), "MM/dd, p")}: {" "}
                   { event.description }
                   <button className="editBtn" onClick={() => toggleEdit(event)}>Edit</button>
                   <button className="delBtn" onClick={() => handleDelete(event.id)}>Delete</button>
