@@ -9,7 +9,10 @@
 - Install flask-cors
 <br>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Or just use pip install -r requirements.txt
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
